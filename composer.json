@@ -1,5 +1,6 @@
 {
     "name": "smart-core/rich-editor-bundle",
+    "description": "Rich editor bundle.",
     "type": "symfony-bundle",
     "license": "MIT",
     "keywords": ["editor", "crawler"],
