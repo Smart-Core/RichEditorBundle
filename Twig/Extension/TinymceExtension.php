@@ -68,7 +68,7 @@ class TinymceExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            'tinymce_init3' => new \Twig_Function_Method($this, 'tinymce_init3', ['is_safe' => ['html']]),
+            new \Twig_SimpleFunction('tinymce_init3', [$this, 'tinymce_init3'], ['is_safe' => ['html']]),
         ];
     }
 
