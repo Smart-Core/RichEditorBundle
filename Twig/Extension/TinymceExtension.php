@@ -3,13 +3,14 @@
 namespace SmartCore\Bundle\RichEditorBundle\Twig\Extension;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Twig\Extension\AbstractExtension;
 
 /**
  * Twig Extension for TinyMce support.
  *
  * @author naydav <web@naydav.com>
  */
-class TinymceExtension extends \Twig_Extension
+class TinymceExtension extends AbstractExtension
 {
     /**
      * Container.
