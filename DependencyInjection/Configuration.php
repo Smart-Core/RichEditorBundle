@@ -19,8 +19,13 @@ class Configuration implements ConfigurationInterface
     {
         $defaults = $this->getTinymceDefaults();
 
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('smart_rich_editor');
+        $treeBuilder = new TreeBuilder('smart_rich_editor');
+        // Keep compatibility with symfony/config < 4.2
+        if (method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            $rootNode = $treeBuilder->root('smart_rich_editor');
+        }
 
         $rootNode
             ->children()
